@@ -31,14 +31,14 @@ Welcome to |_____|____|(____/  |_| version 0.0.1.
 -h Prints this help
 
 [sender]
--k  secret.key                   Generates an AES256 key for symmetric encryption and saves as a file named "secret.key" in this case
+-k  secret.key                              Generates an AES256 key for symmetric encryption and saves as a file named "secret.key" in this case
 
 [sender, receiver]
--kp public.key private.key       Generates an RSA1024 keypair and saves as two files, "public.key" and "private.key" in this case
+-kp public.key private.key                  Generates an RSA1024 keypair and saves as two files, "public.key" and "private.key" in this case
 
 [sender]
--sign msg pkey skey rPkey --out ename      Makes digital signature and envelope at once for the message and saves as a file named in this case
-                                    *Our tool uses RSAwithSHA256 and AES algorithms for generating digital envelope.
+-sign msg pkey skey rPkey --out ename       Makes digital signature and envelope at once for the message and saves as a file named in this case
+                                            *Our tool uses RSAwithSHA256 and AES algorithms for generating digital envelope.
 [receiver]
--vrfy rpkey Pkey ename          Verify whether the received digital envelope is from the correct sender and hasn't been modified.
+-vrfy rpkey Pkey ename                      Verify whether the received digital envelope is from the correct sender and hasn't been modified.
 

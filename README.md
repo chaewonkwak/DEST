@@ -2,6 +2,9 @@
 Digital Envelope Simulation Tool
 
 Applying Rule #2, #7, #12, #22, #24, #26, #33, #38, #39, #41, #43, #49, #50, #54, #56, #63, #64 from Java Coding Guidelines: 75 Recommendations for Reliable and Secure Programs..
+
+Please check dest_description.pptx to see the program overview.
+
 ```java
 
             __    ____  ____ _______

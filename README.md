@@ -37,5 +37,3 @@ Welcome to |_____|____|(____/  |_| version 0.0.1.
 [receiver]
 -vrfy rpkey Pkey ename          Verify whether the received digital envelope is from the correct sender and hasn't been modified.
 
-"""
-'''

@@ -1,7 +1,6 @@
 # DEST
 Digital Envelope Simulation Tool
 ```java
-System.out.println(
     """
     __    ____  ____ _______
    |   \\ |  __|/ ___|__   __|
@@ -39,4 +38,3 @@ Welcome to |_____|____|(____/  |_| version 0.0.1.
 -vrfy rpkey Pkey ename          Verify whether the received digital envelope is from the correct sender and hasn't been modified.
 
 """
-);

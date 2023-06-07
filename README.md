@@ -11,7 +11,7 @@ Welcome to |_____|____|(____/  |_| version 0.0.1.
 
 -= Digital Envelope Simulation Tool  - version 0.0.1 =-
 
-*All generated files are located in the same path as this simulation tool.
+*All generated files are located in the same path as this README.md.
 
 [file name notations]
 :: skey stands for secretkey.
@@ -38,3 +38,4 @@ Welcome to |_____|____|(____/  |_| version 0.0.1.
 -vrfy rpkey Pkey ename          Verify whether the received digital envelope is from the correct sender and hasn't been modified.
 
 """
+'''

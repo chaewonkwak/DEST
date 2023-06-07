@@ -1,5 +1,6 @@
 # DEST
 Digital Envelope Simulation Tool
+```java
 System.out.println(
     """
     __    ____  ____ _______

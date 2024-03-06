@@ -1,9 +1,72 @@
-# DEST
-Digital Envelope Simulation Tool (implemented in command line style)
+<div align="center">
 
-Applying Rule #2, #7, #12, #22, #24, #26, #33, #38, #39, #41, #43, #49, #50, #54, #56, #63, #64 from Java Coding Guidelines: 75 Recommendations for Reliable and Secure Programs..
+   <h3>DEST</h3>
 
-Please check dest_description.pptx to see the program overview.
+  Digital Envelope Simulation Tool
+  <br>
+</div>
+
+## DEST Overview
+
+This is a project aimed at understanding public key infrastructures which are underlying techniques of certificate systems.
+
+DEST is a **Digital Envelope Simulation Tool** developed in Java, appropriately integrating asymmetric and symmetric keys for electronic envelope simulation.
+
+DEST is implemented in command line style so it does not include a graphical user interface (GUI).
+
+DEST applied rule #2, #7, #12, #22, #24, #26, #33, #38, #39, #41, #43, #49, #50, #54, #56, #63, #64 from [Java Coding Guidelines: 75 Recommendations for Reliable and Secure Programs](https://s3-ap-southeast-1.amazonaws.com/tv-prod/documents/null-Addison.Wesley.Java.Coding.Guidelines.Sep.2013.ISBN.032193315X.pdf).
+
+
+## Files
+
+This distribution of DEST consists of the following files:
+
+  * [README.md](https://github.com/chaewonkwak/DEST/blob/main/README.md), a file you are currently reading.
+
+  * [Code Review 1](https://github.com/chaewonkwak/DEST/blob/main/CodeReviewReport(1).pdf) and [Code Review 2](https://github.com/chaewonkwak/DEST/blob/main/CodeReviewReport(2).pdf), files with detailed description of how I applied secure coding rules.
+
+  * [bin](https://github.com/chaewonkwak/DEST/tree/main/bin) and [src](https://github.com/chaewonkwak/DEST/tree/main/src) folders contain the actual program.
+
+
+## Install and Compile
+
+1. Use Eclipse IDE and create a new Java project.
+
+2. Take every files in [bin](https://github.com/chaewonkwak/DEST/tree/main/bin) in your local bin folder.
+
+3. Take every files in [src](https://github.com/chaewonkwak/DEST/tree/main/src) in your local src folder.
+
+4. Compile and run.
+
+## Usage
+
+You can use **dest** command to use DEST program.
+
+Your input:
+```
+dest
+```
+
+The output:
+```
+Digital Envelope Simulation Tool  - verision 0.0.1
+```
+
+There are several options. If the option is **k**, you can write your command like below:
+```
+dest -k
+```
+
+## Help
+
+**dest** command with **h** option shows you the following instruction.
+
+Your input:
+```
+dest -h
+```
+
+The output:
 
 ```java
 

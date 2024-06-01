@@ -28,7 +28,63 @@ This distribution of DEST consists of the following files:
   * [bin](https://github.com/chaewonkwak/DEST/tree/main/bin) and [src](https://github.com/chaewonkwak/DEST/tree/main/src) folders contain the actual program.
 
 
-## Install and Compile
+## Install and Run (Docker Hub)
+
+1. Download the docker image of DEST from my docker repository.
+```
+docker pull chaecker/dest:latest
+```
+
+2. Check if the image is downloaded successfully.
+```
+docker images | grep dest
+```
+
+3. Run a container with DEST base image (e.g. CONTAINER_NAME = dest-container).
+```
+docker run -i -t --name [CONTAINER_NAME] chaecker/dest:latest
+```
+
+4. Put your input.
+```
+dest -h
+```
+
+
+## Install and Run (Git Hub)
+
+1. Download DEST codes from my github repository.
+```
+git clone https://github.com/chaewonkwak/DEST.git
+
+ls
+
+cd DEST
+```
+
+2. Build docker image (e.g. IMAGE_NAME = dest, TAG_NAME = latest). **Don't miss the dot at the last!**
+
+```
+docker build -t [IMAGE_NAME]:[TAG_NAME] .
+```
+
+3. Check if the image is created successfully.
+```
+docker images | grep [IMAGE_NAME]
+```
+
+4. Run a container with the created image.
+```
+docker run -i -t --name [CONTAINER_NAME] [IMAGE_NAME]:[TAG_NAME]
+```
+
+5. Put your input.
+```
+dest -h
+```
+
+
+## Install and Compile (Eclipse IDE)
 
 **Java version requirement: above 15** 
 
@@ -39,9 +95,6 @@ This distribution of DEST consists of the following files:
 3. Take every files in [src](https://github.com/chaewonkwak/DEST/tree/main/src) in your local src folder.
 
 4. Compile and run.
-
-
-**For CI/CD automation, I utilized Docker Hub and GitHub Actions. However, since DEST operates through user inputs with Java Scanner, running it as a container is challenging. I'm still working on this. To execute the application, I recommend downloading the latest image from Docker Hub, then copying the directories and files from the 'bin' and 'src' folders directly into your Java IDE for execution.**
 
 
 ## Usage

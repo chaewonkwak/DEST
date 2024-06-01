@@ -5,27 +5,27 @@ on:
     branches:
       - main
 
-  jobs:
-    build:
-      runs-on: ubuntu-latest
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-        - name: Set up JDK 11
-          uses: actions/setup-java@v2
-          with:
-            java-version: '11'
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+        java-version: '11'
 
-        - name: Build with Gradle
-          run: ./gradlew build
+      - name: Build with Gradle
+        run: ./gradlew build
 
-        - name: Build Docker image
-          run: docker build -t chaecker/DEST:latest .
+      - name: Build Docker image
+        run: docker build -t chaecker/DEST:latest .
 
-        - name: Log in to Docker Hub
-          run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
-        - name: Push Docker image
-          run: docker push chaecker/DEST:latest
+      - name: Push Docker image
+        run: docker push chaecker/DEST:latest

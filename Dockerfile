@@ -1,8 +1,10 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:15-slim
 
 WORKDIR /app
 
 COPY bin /app/bin
-COPY bin /app/src
+COPY src /app/src
 
-CMD ["java", "-cp", "bin", "dest.class"
+RUN javac -source 15 -target 15 -d /app/bin $(find /app/src -name "*.java")
+
+CMD ["java", "-cp", "bin", "Project.dest"]

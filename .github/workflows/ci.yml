@@ -32,7 +32,7 @@ jobs:
         run: docker run -i -t --name test-container chaecker/dest:latest
 
       - name: Run tests in container
-        run: echo "exit"
+        run: exit
         
       - name: Stop and remove container
         run: docker rm -f test-container 

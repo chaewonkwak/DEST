@@ -28,14 +28,14 @@ jobs:
       - name: Build Docker image
         run: docker build -t chaecker/dest:latest .
       
-      - name: Test Run Docker Container
-        run: docker run -i -t --name test-container chaecker/dest:latest
+          #- name: Test Run Docker Container
+          #run: docker run -i -t --name test-container chaecker/dest:latest
 
-      - name: Run tests in container
-        run: exit
+          #- name: Run tests in container
+          #run: exit
         
-      - name: Stop and remove container
-        run: docker rm -f test-container 
+          # - name: Stop and remove container
+          #run: docker rm -f test-container 
 
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin

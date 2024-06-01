@@ -30,6 +30,8 @@ This distribution of DEST consists of the following files:
 
 ## Install and Compile
 
+**Java version requirement: above 15** 
+
 1. Use Eclipse IDE and create a new Java project.
 
 2. Take every files in [bin](https://github.com/chaewonkwak/DEST/tree/main/bin) in your local bin folder.
@@ -37,6 +39,10 @@ This distribution of DEST consists of the following files:
 3. Take every files in [src](https://github.com/chaewonkwak/DEST/tree/main/src) in your local src folder.
 
 4. Compile and run.
+
+
+**For CI/CD automation, I utilized Docker Hub and GitHub Actions. However, since DEST operates through user inputs with Java Scanner, running it as a container is challenging. I'm still working on this. To execute the application, I recommend downloading the latest image from Docker Hub, then copying the directories and files from the 'bin' and 'src' folders directly into your Java IDE for execution.**
+
 
 ## Usage
 

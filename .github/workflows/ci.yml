@@ -28,8 +28,8 @@ jobs:
       - name: Build Docker image
         run: docker build -t chaecker/dest:latest .
       
-          #- name: Test Run Docker Container
-          #run: docker run -i -t --name test-container chaecker/dest:latest
+      - name: Test Run Docker Container
+        run: docker run -i -t -d --name test-container chaecker/dest:latest
 
           #- name: Run tests in container
           #run: exit
@@ -39,7 +39,7 @@ jobs:
 
       - name: Check Container Status
         run: |
-          CONTAINER_STATUS=$(docker ps -a --filter name=dest-container --format "{{.Status}}")
+          CONTAINER_STATUS=$(docker ps -a --filter name=test-container --format "{{.Status}}")
           echo "Container Status: $CONTAINER_STATUS"
           if [[ "$CONTAINER_STATUS" == *Up* ]]; then
             echo "Container is running."

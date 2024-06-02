@@ -37,8 +37,23 @@ jobs:
           # - name: Stop and remove container
           #run: docker rm -f test-container 
 
+      - name: Check Container Status
+        run: |
+          CONTAINER_STATUS=$(docker ps -a --filter name=dest-container --format "{{.Status}}")
+          echo "Container Status: $CONTAINER_STATUS"
+          if [[ "$CONTAINER_STATUS" == *Up* ]]; then
+            echo "Container is running."
+            exit 0
+          else
+            echo "Container failed to start."
+            exit 1
+          fi
+
       - name: Log in to Docker Hub
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
 
       - name: Push Docker image
+        if: ${{ success() }}
         run: docker push chaecker/dest:latest
+
+

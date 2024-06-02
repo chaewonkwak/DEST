@@ -89,6 +89,20 @@ apt-get update
 apt-get install wget
 ```
 
+6. After adding your files, you should go back to dest CLI to continue the program.
+
+6-1. Exit from the container with Ctrl P + Q.
+
+6-2. Restart the docker container with **docker attach**.
+```
+docker attach [CONTAINER_NAME]
+```
+6-3. Type "dest" for starting dest CLI.
+```
+dest
+```
+
+
 ## Install and Run (Git Hub)
 
 1. Download DEST codes from my github repository.

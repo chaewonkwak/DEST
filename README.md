@@ -40,7 +40,8 @@ docker pull chaecker/dest:latest
 docker images | grep dest
 ```
 
-3. Run a container with DEST base image (e.g. CONTAINER_NAME = dest-container).
+3. Run a docker container with DEST base image (e.g. CONTAINER_NAME = dest-container).
+
 ```
 docker run -i -t --name [CONTAINER_NAME] chaecker/dest:latest
 ```
@@ -50,6 +51,43 @@ docker run -i -t --name [CONTAINER_NAME] chaecker/dest:latest
 dest -h
 ```
 
+5. If you want to check files in the docker container or put your secret/public/private key files or message file,
+
+5-1. Exit from dest program first.
+```
+exit
+```
+
+5-2. Check if the container is marked as "Exited".
+```
+docker ps -a | grep dest
+```
+
+5-3. Restart the docker container **with -it options** and **bash command**.
+```
+docker start -it [CONTAINER_NAME] bash
+```
+
+5-4. Now you can access the docker container's local file system. 
+
+**Every key and plaintext file should locate in /app/(working directory).**
+
+When you generate keys using **dest CLI**, you can check the generated file with linux 'ls' command.
+```
+ls
+```
+
+5-4-1. If you want to use 'vi' command for adding your file, please install vim in the container.
+```
+apt-get update
+apt-get install vim
+```
+
+5-4-2. if you want to use 'wget' for downloading your file, please install wgent first.
+```
+apt-get update
+apt-get install wget
+```
 
 ## Install and Run (Git Hub)
 
